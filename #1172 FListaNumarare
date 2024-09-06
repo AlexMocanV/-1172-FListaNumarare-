@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+int numarare(nod * p)
+{
+    nod * prim=p;
+    while(prim!=NULL)
+    {
+        prim=prim->urm;
+        return numarare(prim)+1;
+    }
+    return 0;
+}
